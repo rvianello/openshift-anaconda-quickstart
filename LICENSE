@@ -25,8 +25,8 @@ NOTE:
 
 In deploying an application based on this quickstart, an Anaconda Python 
 distribution is downloaded from http://repo.continuum.io/miniconda/index.html
-and installed on the remote system. Anaconda is made available by Continuum 
-Analytics Inc under the terms available at the following link:
+and installed on the host. Anaconda is made available by Continuum Analytics Inc
+under the terms available at the following link:
 
 http://docs.continuum.io/anaconda/eula.html
 
