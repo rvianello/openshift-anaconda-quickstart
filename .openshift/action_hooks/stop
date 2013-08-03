@@ -3,6 +3,6 @@
 . ${OPENSHIFT_DATA_DIR}env.sh
 
 if [ -f ${OPENSHIFT_TMP_DIR}uwsgi.pid ]; then
-    uwsgi --stop `cat ${OPENSHIFT_TMP_DIR}uwsgi.pid`
+    uwsgi --stop ${OPENSHIFT_TMP_DIR}uwsgi.pid
 fi
 exit 0
