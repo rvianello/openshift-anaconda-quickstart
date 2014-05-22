@@ -1,10 +1,12 @@
 #!/bin/bash
 
+MINICONDA_VERSION=3.4.2
+
 if [ ! -d ${OPENSHIFT_DATA_DIR}anaconda ]; then
     pushd $OPENSHIFT_TMP_DIR
-    wget http://repo.continuum.io/miniconda/Miniconda-1.6.2-Linux-x86_64.sh
-    /bin/bash ./Miniconda-1.6.2-Linux-x86_64.sh -b -p ${OPENSHIFT_DATA_DIR}anaconda
-    rm Miniconda-1.6.2-Linux-x86_64.sh
+    wget http://repo.continuum.io/miniconda/Miniconda-${MINICONDA_VERSION}-Linux-x86_64.sh
+    /bin/bash ./Miniconda-${MINICONDA_VERSION}-Linux-x86_64.sh -b -p ${OPENSHIFT_DATA_DIR}anaconda
+    rm Miniconda-${MINICONDA_VERSION}-Linux-x86_64.sh
     popd
     rm -rf ${OPENSHIFT_DATA_DIR}conda-env
 fi
