@@ -8,15 +8,19 @@ if [ ! -d ${OPENSHIFT_DATA_DIR}anaconda ]; then
     /bin/bash ./Miniconda-${MINICONDA_VERSION}-Linux-x86_64.sh -b -p ${OPENSHIFT_DATA_DIR}anaconda
     rm Miniconda-${MINICONDA_VERSION}-Linux-x86_64.sh
     popd
+
+    PATH=${OPENSHIFT_DATA_DIR}anaconda/bin:$PATH \
+    conda config --add channel http://conda.binstar.org/USER
+
     rm -rf ${OPENSHIFT_DATA_DIR}conda-env
 fi
 
 if [ ! -d ${OPENSHIFT_DATA_DIR}conda-env ]; then
-    export PATH=${OPENSHIFT_DATA_DIR}anaconda/bin:$PATH
+    PATH=${OPENSHIFT_DATA_DIR}anaconda/bin:$PATH \
     conda create --yes --file ${OPENSHIFT_REPO_DIR}conda-spec.txt -p ${OPENSHIFT_DATA_DIR}conda-env 
 fi
 
 if [ ! -f ${OPENSHIFT_DATA_DIR}env.sh ]; then
-    echo "PATH=\${OPENSHIFT_DATA_DIR}anaconda/bin:\$PATH" >> ${OPENSHIFT_DATA_DIR}env.sh
+    echo "export PATH=\${OPENSHIFT_DATA_DIR}anaconda/bin:\$PATH" >> ${OPENSHIFT_DATA_DIR}env.sh
     echo "source activate \${OPENSHIFT_DATA_DIR}conda-env" >> ${OPENSHIFT_DATA_DIR}env.sh
 fi
