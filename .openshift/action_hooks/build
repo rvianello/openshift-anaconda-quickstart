@@ -3,7 +3,7 @@
 . ${OPENSHIFT_DATA_DIR}env.sh
 
 conda install \
-    -c https://conda.binstar.org/ric
+    -c https://conda.binstar.org/ric \
     --yes --file ${OPENSHIFT_REPO_DIR}conda-spec.txt
 
 pip install --use-mirrors -r $OPENSHIFT_REPO_DIR/pip-requirements.txt
