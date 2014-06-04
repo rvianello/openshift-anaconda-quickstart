@@ -1,3 +1,7 @@
-The OpenShift `diy` cartridge documentation can be found at:
+OpenShift Anaconda Quickstart
+=============================
 
-https://github.com/openshift/origin-server/tree/master/cartridges/openshift-origin-cartridge-diy/README.md
+This quickstart project implements the basic skeleton of a WSGI application 
+using the Anaconda python distribution on top of an OpenShift DIY cartridge.
+
+    $ rhc create-app mcq diy-0.1 --from-code <this repo URL>

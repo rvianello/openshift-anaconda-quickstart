@@ -1,0 +1,4 @@
+#!/bin/bash
+
+. ${OPENSHIFT_DATA_DIR}env.sh
+pip install --use-mirrors -r $OPENSHIFT_REPO_DIR/pip-requirements.txt
