@@ -2,6 +2,6 @@
 
 . ${OPENSHIFT_DATA_DIR}env.sh
 
-conda update --yes --file ${OPENSHIFT_REPO_DIR}conda-spec.txt
+conda install --yes --file ${OPENSHIFT_REPO_DIR}conda-spec.txt
 
 pip install --use-mirrors -r $OPENSHIFT_REPO_DIR/pip-requirements.txt

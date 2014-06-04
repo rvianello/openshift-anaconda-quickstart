@@ -17,7 +17,7 @@ fi
 
 if [ ! -d ${OPENSHIFT_DATA_DIR}conda-env ]; then
     PATH=${OPENSHIFT_DATA_DIR}anaconda/bin:$PATH \
-    conda create --yes --file ${OPENSHIFT_REPO_DIR}conda-spec.txt -p ${OPENSHIFT_DATA_DIR}conda-env 
+    conda create --yes -p ${OPENSHIFT_DATA_DIR}conda-env python 
 fi
 
 if [ ! -f ${OPENSHIFT_DATA_DIR}env.sh ]; then
