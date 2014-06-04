@@ -1,5 +1,2 @@
 #!/bin/bash
 
-# make sure the static dir exists
-mkdir -p ${OPENSHIFT_REPO_DIR}static
-

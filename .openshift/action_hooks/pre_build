@@ -19,3 +19,7 @@ if [ ! -f ${OPENSHIFT_DATA_DIR}env.sh ]; then
     echo "export PATH=\${OPENSHIFT_DATA_DIR}anaconda/bin:\$PATH" >> ${OPENSHIFT_DATA_DIR}env.sh
     echo "source activate conda-env" >> ${OPENSHIFT_DATA_DIR}env.sh
 fi
+
+# make sure the static dir exists
+mkdir -p ${OPENSHIFT_REPO_DIR}static
+
