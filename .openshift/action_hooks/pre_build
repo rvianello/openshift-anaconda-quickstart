@@ -10,7 +10,7 @@ if [ ! -d ${OPENSHIFT_DATA_DIR}anaconda ]; then
     popd
 
     PATH=${OPENSHIFT_DATA_DIR}anaconda/bin:$PATH \
-    conda config --add channel http://conda.binstar.org/USER
+    conda config --add channel http://conda.binstar.org/ric
 
     rm -rf ${OPENSHIFT_DATA_DIR}conda-env
 fi
