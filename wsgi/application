@@ -1,10 +1,11 @@
 #!/usr/bin/python
 import os
+import sys
 
 def application(environ, start_response):
     ctype = 'text/plain'
-    response = ['%s: %s' % (key, value)
-                     for key, value in sorted(environ.items())]
+    response = sys.path[:] + ['%s: %s' % (key, value)
+                              for key, value in sorted(environ.items())]
     response = '\n'.join(response)
 
     status = '200 OK'
