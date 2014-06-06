@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 MINICONDA_VERSION=3.4.2
 
