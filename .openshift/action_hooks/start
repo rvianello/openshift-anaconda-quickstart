@@ -2,13 +2,4 @@
 
 . ${OPENSHIFT_DATA_DIR}env.sh
 
-#uwsgi \
-#    -s $OPENSHIFT_DIY_IP:$OPENSHIFT_DIY_PORT \
-#    --socket-protocol http \
-#    --wsgi-file ${OPENSHIFT_REPO_DIR}wsgi/application \
-#    --pp ${OPENSHIFT_REPO_DIR}wsgi/ \
-#    -d ${OPENSHIFT_DIY_LOG_DIR}uwsgi.log \
-#    --pidfile ${OPENSHIFT_TMP_DIR}uwsgi.pid \
-#    --static-map /static=${OPENSHIFT_REPO_DIR}static
-
 circusd --daemon ${OPENSHIFT_REPO_DIR}circus.ini
