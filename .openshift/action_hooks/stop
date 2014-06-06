@@ -2,7 +2,9 @@
 
 . ${OPENSHIFT_DATA_DIR}env.sh
 
-if [ -f ${OPENSHIFT_TMP_DIR}uwsgi.pid ]; then
-    uwsgi --stop ${OPENSHIFT_TMP_DIR}uwsgi.pid
-fi
-exit 0
+#if [ -f ${OPENSHIFT_TMP_DIR}uwsgi.pid ]; then
+#    uwsgi --stop ${OPENSHIFT_TMP_DIR}uwsgi.pid
+#fi
+#exit 0
+
+circusctl quit
