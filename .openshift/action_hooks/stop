@@ -8,3 +8,4 @@
 #exit 0
 
 circusctl quit
+exit 0
