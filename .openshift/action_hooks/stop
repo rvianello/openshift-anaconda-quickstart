@@ -3,7 +3,7 @@
 . ${OPENSHIFT_DATA_DIR}env.sh
 
 if [ -f ${OPENSHIFT_TMP_DIR}circus.pid ]; then
-    circusctl quit --waiting \
+    kill -INT `cat ${OPENSHIFT_TMP_DIR}circus.pid` \
     && rm ${OPENSHIFT_TMP_DIR}circus.pid
 fi
 exit 0
