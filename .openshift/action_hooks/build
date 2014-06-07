@@ -6,4 +6,5 @@ conda install \
     -c https://conda.binstar.org/ric \
     --yes --file ${OPENSHIFT_REPO_DIR}conda-spec.txt
 
-pip install -r $OPENSHIFT_REPO_DIR/pip-requirements.txt
+# currently not used/needed
+#pip install -r $OPENSHIFT_REPO_DIR/pip-requirements.txt

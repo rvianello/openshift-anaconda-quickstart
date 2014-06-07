@@ -2,4 +2,5 @@
 
 . ${OPENSHIFT_DATA_DIR}env.sh
 
-circusd --daemon ${OPENSHIFT_REPO_DIR}circus.ini
+uwsgi --ini ${OPENSHIFT_REPO_DIR}uwsgi.ini
+#circusd --daemon ${OPENSHIFT_REPO_DIR}circus.ini
