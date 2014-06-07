@@ -3,4 +3,3 @@
 . ${OPENSHIFT_DATA_DIR}env.sh
 
 uwsgi --ini ${OPENSHIFT_REPO_DIR}uwsgi.ini
-#circusd --daemon ${OPENSHIFT_REPO_DIR}circus.ini
